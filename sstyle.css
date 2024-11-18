@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to right, #6a11cb, #e3e6eb);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    top: -100px; /* Hide the header initially */
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease;
+}
+
+header:hover {
+    top: 0; /* Show the header on hover */
+}
+
+header .header-content {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+header nav {
+    text-align: center;
+}
+
+header nav a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #00d2ff;
+}
+
+/* Sections */
+section {
+    padding: 80px 20px; /* Account for fixed header */
+    margin: 20px auto;
+    max-width: 900px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* About and Experience Section */
+section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #00d2ff;
+}
+
+section p, section ul {
+    font-size: 1em;
+    color: #ddd;
+    line-height: 1.8;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+/* Contact Section */
+section#contact {
+    background: rgba(255, 255, 255, 0.1); /* Add slight transparency for distinction */
+    color: #fff;
+}
+
+section#contact h2 {
+    color: #00ff99; /* A vibrant color for the heading */
+}
+
+section#contact a {
+    color: #00d2ff; /* Bright blue for links */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+section#contact a:hover {
+    color: #ff99cc; /* A soft pink hover effect */
+}
+
+section#contact p {
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    color: #bbb;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 1.5s forwards;
+    opacity: 0;
+}
+
+.slide-in {
+    animation: fadeInUp 1.5s forwards;
+    opacity: 0;
+}
